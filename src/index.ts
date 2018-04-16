@@ -16,6 +16,25 @@ export default class Main {
     }    
 }
 
+
 let main = new Main();
 main.start();
-main.afficherSession();
+
+var router = () => {
+    if (location.hash == '#speakers-list') {
+        // TODO afficher vue liste des présentateurs
+    } else if (location.hash == '#sessions-list') {
+       main.afficherSession();
+    } else {
+        // TODO afficher vue par défaut
+    }
+}
+
+window.addEventListener('load', () => {
+
+    window.onhashchange = () => {
+        router();
+    };
+
+    router();
+});
