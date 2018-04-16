@@ -12,7 +12,7 @@ export class SessionsListComponent implements Component{
     constructor(){ }
     
     render(selector:string){
-        return this.sessions.then(session =>{ session.forEach( s =>names = names.concat("<div id=\"session\">"+ s.name +"</div>"))        
+        this.sessions.then(session =>{ session.forEach( s =>names = names.concat("<div class=\"session\">"+ s.name +"</div>"))        
                 window.document.querySelector(selector).innerHTML = names;      
         })             
               
