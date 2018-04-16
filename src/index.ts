@@ -1,6 +1,5 @@
 import {LayoutComponent} from "./components/layout.component";
-
-
+import {SessionsListComponent} from "./components/sessions.list.component";
 
 
 export default class Main {
@@ -11,9 +10,12 @@ export default class Main {
         const layout = new LayoutComponent();
         layout.render();
     }
-
-    
+    afficherSession() {
+        const sessionList = new SessionsListComponent();
+        sessionList.render("#main-view");
+    }    
 }
 
 let main = new Main();
 main.start();
+main.afficherSession();
