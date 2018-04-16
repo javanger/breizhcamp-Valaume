@@ -1,10 +1,19 @@
+import {LayoutComponent} from "./components/layout.component";
+
+
+
+
 export default class Main {
     constructor() {
-        console.log('Typescript Webpack starter launched');
-        alert('Conférence App démarré !');
+    }
+
+    start() {
+        const layout = new LayoutComponent();
+        layout.render();
     }
 
     
 }
 
-let start = new Main();
+let main = new Main();
+main.start();

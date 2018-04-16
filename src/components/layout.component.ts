@@ -1,0 +1,21 @@
+import Component from "./component";
+
+const template = `
+<header>Ici Bientôt un logo</header>
+<nav>Ici bientôt un menu</nav>
+<section id="main-view">
+    Ici le contenu principal en attente de chargement
+</section>
+<footer>Ici bientôt un pied de page</footer>
+`
+
+export class LayoutComponent implements Component{
+
+    constructor(){
+
+    }
+
+     render():void{
+        window.document.querySelector("body").innerHTML = template
+    }
+}
